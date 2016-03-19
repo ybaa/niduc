@@ -48,8 +48,8 @@ dane1 = rand(1,zakres);
 dane1 = random(zakres,dane1,0.0000001);
 dane1 = scramblerDVB(zakres,dane1);
 [ileZer1, ileJedynek1] = counter(dane,zakres);
-subplot(1,3,2)
-hist(dane1,2)
+subplot(1,3,2);
+hist(dane1,2);
 
 dane2 = rand(1,zakres);
 dane2 = random(zakres,dane2,0.5);
@@ -57,7 +57,6 @@ dane2 = scramblerDVB(zakres,dane2);
 [ileZer2, ileJedynek2] = counter(dane,zakres);
 subplot(1,3,3)
 hist(dane2,2)
-
 
 
 figure(2)
