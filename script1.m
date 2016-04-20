@@ -106,7 +106,7 @@ xlabel('wartosc');
 %}
 
 
-zakres = 112;
+zakres = 4000;
 danePrzed = rand(1,zakres);
 danePrzed = random(zakres,danePrzed,0.999999);
 daneV34_1 = danePrzed;
@@ -116,7 +116,10 @@ daneV34_2 = descramblerV34(zakres,daneV34_1);
 disp('poscr');
 disp(daneV34_1);
 disp('geges');
-ddd = syncSimulation(daneV34_1, zakres, 112);
+[ddd,ileErr, zakres2] = syncSimulation(danePrzed, zakres, 112);
+ddd
+disp('ile err: ');
+disp(ileErr);
 
 
 
