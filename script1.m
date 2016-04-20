@@ -1,5 +1,7 @@
 clc
-
+ %{
+%histogramy dla descramblera zby sprawdzic czy dzia³a, a póŸniej ile jest
+%ciagów zer w kazdym scramblerze
 
 %histogramy wystapien dlugosci ciagow 0 dla scramblerow DVB, V34 i Naiwnego
 %dane z przewaga 0 (same 0)
@@ -100,4 +102,21 @@ subplot(1,3,3);
 hist(daneDVB6,2);
 ylabel('ilosc wystapien');
 xlabel('wartosc');
+
+%}
+
+
+zakres = 112;
+danePrzed = rand(1,zakres);
+danePrzed = random(zakres,danePrzed,0.999999);
+daneV34_1 = danePrzed;
+daneV34_1 = scramblerV34(zakres,daneV34_1);
+daneV34_2 = descramblerV34(zakres,daneV34_1);
+
+disp('poscr');
+disp(daneV34_1);
+disp('geges');
+ddd = syncSimulation(daneV34_1, zakres, 112);
+
+
 

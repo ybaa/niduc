@@ -1,4 +1,4 @@
-function [ dane ] = scramblerV34( zakres,dane)
+function [ daneOut ] = scramblerV34( zakres,dane)
 
 
 sync = [ 1 0 0 1 0 1 0 1 0 0 0 0 0 0 0 1 0 1 1 1 0 0 1 ]';
@@ -11,8 +11,8 @@ sync = [ 1 0 0 1 0 1 0 1 0 0 0 0 0 0 0 1 0 1 1 1 0 0 1 ]';
         sync = circshift(sync,1);
         
         xor2 = xor(xor1, dane(i));
-        sync(i) = xor2;
-        dane(i) = xor2;
+        sync(1) = xor2;
+        daneOut(i) = xor2;
     
     
     
