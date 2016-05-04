@@ -106,20 +106,19 @@ xlabel('wartosc');
 %}
 
 
-zakres = 4000;
+zakres = 10000;
 danePrzed = rand(1,zakres);
-danePrzed = random(zakres,danePrzed,0.999999);
+danePrzed = random(zakres,danePrzed,0.5);
 daneV34_1 = danePrzed;
 daneV34_1 = scramblerV34(zakres,daneV34_1);
 daneV34_2 = descramblerV34(zakres,daneV34_1);
 
-disp('poscr');
-disp(daneV34_1);
-disp('geges');
-[ddd,ileErr, zakres2] = syncSimulation(danePrzed, zakres, 112);
-ddd
-disp('ile err: ');
-disp(ileErr);
+%[ddd,ileErr, zakres2] = syncSimulation(danePrzed, zakres,1);
+%disp('asdasda');
+%disp(ileErr);
+%disp(zakres2);
+
+OEE( danePrzed, zakres);
 
 
 
